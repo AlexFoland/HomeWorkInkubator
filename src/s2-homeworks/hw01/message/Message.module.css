@@ -1,0 +1,68 @@
+.message {
+    max-width: 1280px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-flow: row-reverse wrap-reverse;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px; 
+
+}
+
+.imageAndText {
+    display: flex;
+    align-items:center;
+    flex-flow: row-reverse
+}
+
+.imageAndText img {
+    width: 48px; 
+    height: 48px;
+    border-radius: 50%; 
+    margin-right: 12px; 
+}
+
+.text {
+    position: relative; /* Позволяет позиционировать псевдоэлементы относительно этого блока */
+    background-color: #007bff; /* Синий фон */
+    color: white; /* Цвет текста */
+    padding: 8px 15px; /* Внутренние отступы */
+    border-radius: 10px; /* Закругленные углы */
+    max-width: 527px; /* Максимальная ширина сообщения */
+    /*margin: 20px; !* Отступы вокруг блока *!*/
+    margin: 0 10px 0 0;
+}
+.text:after {
+    content: ''; /* Псевдоэлемент без контента */
+    position: absolute; /* Абсолютное позиционирование относительно родителя */
+    bottom: 0; /* Располагаем внизу */
+    right: -10px; /* Сдвигаем вправо за пределы блока */
+    width: 0;
+    height: 0;
+    border: 20px solid transparent; /* Треугольник из прозрачных границ */
+    border-bottom-color: #007bff; /* Цвет треугольника совпадает с цветом блока */
+    border-left: 0; /* Убираем правую границу */
+}
+.name {
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff; 
+    margin-bottom: 4px; 
+}
+
+.messageText {
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #0066CC;
+    padding: 10px;
+}
+
+.time {
+    font-size: 12px;
+    color: #888;
+    bottom: 8px;
+    right: 10px;
+}
