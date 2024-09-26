@@ -2,9 +2,9 @@ import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
 
 type GreetingPropsType = {
-    name: any // need to fix any
+    name: string // need to fix any
     setNameCallback: any // need to fix any
-    addUser: any // need to fix any
+    addUser: (user:string)=>void // need to fix any
     onBlur: any // need to fix any
     onEnter: any // need to fix any
     error: any // need to fix any
@@ -53,7 +53,7 @@ const Greeting: React.FC<GreetingPropsType> = (
 
                 <button
                     id={'hw3-button'}
-                    onClick={addUser}
+                    onClick={()=>addUser(name)}
                     className={s.button}
                     disabled={!name.trim()}
                     // ДАВАЙТЕ ПРОСЛЕДИМ БОЕВОЙ ПУТЬ addUser:
